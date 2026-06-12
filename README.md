@@ -1,2 +1,4 @@
 # Payment Terminal
-PCB and code for Donation Box project
+The idea was to built payment terminal for catholic church, it used for Donation. The customer just puts a banknote or a coin into the machine and candles start to illuminate. To built this machine I used ICT NK77 Bill Acceptor and ICT UCA Coin Acceptor. For illuminiation I just ordered real-style electrical candles from Shopee, the price per one was about 50 THB. ICT NK77 supports "pulse" protocol, according to DIP switch position, it sends 1 pulse per 10 THB. So if you put there 100 THB bill, it provides 10 pulses. 
+//
+At first my idea was to control these candles with infrared LED, because they controlled by remote as well. But but after going deep into NEC-type protocols, possible issues when someone just moved a candle, fast batteries discharge I just decided to hardwire and supply them from separate 5V PSU. 
