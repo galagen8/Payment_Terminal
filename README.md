@@ -1,8 +1,48 @@
-# Payment Terminal
-The idea was to create payment terminal for catholic church, it used for Donation. The customer just puts a banknote or a coin into the machine and candles start to illuminate. To built this machine I used ICT NK77 Bill Acceptor and ICT UCA Coin Acceptor. For illuminiation I just found real-style electrical candles from Shopee, the price per one was about 50 THB. ICT NK77 supports "pulse" protocol, according to DIP switch position on acceptor, so it sends 1 pulse per 10 THB. So if you put there 100 THB bill, it provides 10 pulses. This data goes to MCU STM32G030K8T6, it reads that data and analyse. I've decided to use this MCU because it's cheap and reliable. It doesn't have too much pins, but I need only 4 pins out. Also for prototyping I used NUCLEO F446RE and I don't need to chnage the code - it ports from STM32F446RET6 to STM32G030K8T6 just well. Provided PCB using Altium Designer and ordered on JLCPCB, but I assembled it myself. You may find all Altuim files in Altuim Folder.
-//
-Desighed elnlose for this machine in Solidworks (you may find Solidworks files in Solidworks folder). Added metallic safe deposit with lock.
-//
-Algorythm works like that: If there was only one bill - only 1st candle starts to light for 10 minutes. If during 1st canndle lights up and you put another bill - 1st and 2nd candle start and it resets 10 mins timer. You put another one bill - 1st, 2nd and 3rd candles starts to light up all together with renewed 10 mins timer. Also, when you turn on the system - it runs diagnostics mode - all candles starts to light up for one sec one by one and machine starts to work normally right after that. There are two parallel sockets for each candle on PCB, so you may connect totally 6 candles.
-//
-At first my idea was to control these candles with infrared LED, because they controlled by remote as well. But but after going deep into NEC-type protocols, possible issues when someone just moved a candle, fast batteries discharge I just decided to hardwire and supply them from separate 5V PSU. 
+# Banknote-Operated Donation Terminal
+
+A hardware and software solution designed as an automated donation terminal for a church. The system accepts cash (banknotes) and triggers electrical decorative candles to light up for a specific duration based on the donation amount.
+
+This repository contains the complete design files, including MCU firmware, PCB layouts, and 3D mechanical models.
+
+---
+
+## Tech Stack & Tools
+
+* MCU & Firmware: STM32G030K8T6 (Production), NUCLEO-F446RE (Prototyping) using STM32CubeHAL
+* ECAD: Altium Designer
+* MCAD: SolidWorks
+* Peripherals: ICT NK77 Bill Acceptor
+
+---
+
+## Features
+
+* Banknote Validation: Integrated with an ICT NK77 Bill Acceptor using a reliable pulse-based protocol.
+* Cost-Optimized Hardware: Built on a budget-friendly and reliable STM32G0 MCU, utilizing STM32CubeHAL for seamless firmware portability from the initial STM32F4 prototype.
+* Hardware-Driven Power Gating: Candles are hardwired and controlled via low-side NPN transistor switches, eliminating wireless reliability issues and fast battery discharge common with infrared (NEC-protocol) remotes.
+* Scalable Output: The custom PCB features parallel sockets for each channel, supporting up to 6 candles in total (powered by a dedicated stable 5V PSU).
+* Secure Enclosure: Features a custom-designed sheet metal chassis with an integrated metallic safe deposit box and physical lock.
+
+---
+
+## How It Works & Algorithm
+
+### 1. Power-On Self-Test (POST) / Diagnostics
+Upon boot, the system runs a quick diagnostic routine: all candles light up sequentially for 1 second each to verify wiring, transistor switching, and LED functionality before entering normal operation mode.
+
+### 2. Pulse Interfacing
+The ICT NK77 Bill Acceptor is configured via DIP switches to use the pulse protocol, transmitting 1 pulse per 10 THB (e.g., a 100 THB banknote generates 10 pulses). The STM32 MCU captures and processes these incoming pulses.
+
+### 3. Candle Control Logic
+The lighting sequence dynamically scales with the donation amount, managed by a rolling timer:
+* 1st Level Donation: The 1st candle lights up for 10 minutes.
+* 2nd Level Donation: If another bill is inserted while the 1st candle is active, the 2nd candle turns on, and the 10-minute countdown resets for both.
+* 3rd Level Donation: Subsequent insertions activate the 3rd candle and renew the master 10-minute timer.
+
+---
+
+## Repository Structure
+
+* /Firmware — STM32CubeIDE project and source code (HAL-based).
+* /Altium — Schematic and PCB layout files (manufactured via JLCPCB, hand-assembled).
+* /SolidWorks — 3D models and manufacturing drawings for the sheet metal enclosure and safe box.
