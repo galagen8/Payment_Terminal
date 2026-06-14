@@ -1,9 +1,6 @@
-# Payment Donation Terminal
+# Banknote-Operated Donation Terminal
 
 A hardware and software solution designed as an automated donation terminal for a church. The system accepts cash (banknotes) and triggers electrical decorative candles to light up for a specific duration based on the donation amount.
-
-<!-- Главное фото готового или установленного устройства -->
-![Installed Donation Terminal](images/final_installation.jpg)
 
 This repository contains the complete design files, including MCU firmware, PCB layouts, and 3D mechanical models.
 
@@ -25,13 +22,23 @@ This repository contains the complete design files, including MCU firmware, PCB 
 * Hardware-Driven Power Gating: Candles are hardwired and controlled via low-side NPN transistor switches, eliminating wireless reliability issues and fast battery discharge common with infrared (NEC-protocol) remotes.
 * Scalable Output: The custom PCB features parallel sockets for each channel, supporting up to 6 candles in total (powered by a dedicated stable 5V PSU).
 
-<!-- Рендер 3D-платы из Altium -->
-![Custom PCB Design in Altium](images/altium_pcb_3d.jpg)
+### PCB Design & Assembly
 
-* Secure Enclosure: Features a custom-designed sheet metal chassis with an integrated metallic safe deposit box and physical lock.
+*Реальная собранная плата:*
+![Custom PCB Assembly](1765641905588.jpg)
 
-<!-- Скриншот модели корпуса из SolidWorks -->
-![Enclosure Design in SolidWorks](images/solidworks_enclosure.jpg)
+*Топология / 3D-визуализация в Altium Designer:*
+![Altium Designer PCB Layout](название_файла_альтиум.jpg)
+
+* Secure Enclosure: Features a custom-designed sheet metal chassis with an integrated metallic safe deposit box and physical lock. The terminal utilizes a multi-rail power system to supply the necessary 12V for the bill acceptor and a separate regulated rail for the logic control board.
+
+### Enclosure Design & System Sub-Assembly
+
+*3D-модель корпуса в SolidWorks:*
+![SolidWorks Enclosure Design](название_файла_солид.jpg)
+
+*Внутренний монтаж системы и блоки питания:*
+![System Sub-Assembly and Power Management](20251219_131434.jpg)
 
 ---
 
