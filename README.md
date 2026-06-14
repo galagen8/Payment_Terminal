@@ -1,6 +1,8 @@
-# Payment Donation Terminal
+# Banknote-Operated Donation Terminal
 
 A hardware and software solution designed as an automated donation terminal for a church. The system accepts cash (banknotes) and triggers electrical decorative candles to light up for a specific duration based on the donation amount.
+
+![Finished Donation Terminal in Installation](название_твоего_главного_фото.jpg)
 
 This repository contains the complete design files, including MCU firmware, PCB layouts, and 3D mechanical models.
 
