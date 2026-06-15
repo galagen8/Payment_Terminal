@@ -2,7 +2,9 @@
 
 A hardware and software solution designed as an automated donation terminal for a church. The system accepts cash (banknotes) and triggers electrical decorative candles to light up for a specific duration based on the donation amount.
 
-![Finished Donation Terminal in Installation](название_твоего_главного_фото.jpg)
+![Finished Donation Terminal in Installation](название_твоего_главного_фото.jpg) <img width="3468" height="4624" alt="20251226_145702" src="https://github.com/user-attachments/assets/0ebac5e1-40f9-47f1-90ed-64596b04e598" />
+
+
 
 This repository contains the complete design files, including MCU firmware, PCB layouts, and 3D mechanical models.
 
