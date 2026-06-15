@@ -46,6 +46,8 @@ This repository contains the complete design files, including MCU firmware, PCB 
 <p/>
 <br>
 
+---
+
 ### Enclosure Design & System Sub-Assembly
 
 *3D model of the Enclosure in SolidWorks:*
