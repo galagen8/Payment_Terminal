@@ -1,11 +1,13 @@
-# Payment Donation Terminal
+# Payment-Donation-Terminal
 
 A hardware and software solution designed as an automated donation terminal for a church. The system accepts cash (banknotes) and triggers electrical decorative candles to light up for a specific duration based on the donation amount.
+<br><br>
 
-![Finished Donation Terminal in Installation](название_твоего_главного_фото.jpg) <img width="3468" height="4624" alt="20251226_145702" src="https://github.com/user-attachments/assets/0ebac5e1-40f9-47f1-90ed-64596b04e598" />
+<p align="center">
+<img width="500" alt="Finished Donation Terminal in Installation" src="https://github.com/user-attachments/assets/0ebac5e1-40f9-47f1-90ed-64596b04e598" />
+</p>
 
-
-
+<br>
 This repository contains the complete design files, including MCU firmware, PCB layouts, and 3D mechanical models.
 
 ---
@@ -23,26 +25,42 @@ This repository contains the complete design files, including MCU firmware, PCB 
 
 * Banknote Validation: Integrated with an ICT NK77 Bill Acceptor using a reliable pulse-based protocol.
 * Cost-Optimized Hardware: Built on a budget-friendly and reliable STM32G0 MCU, utilizing STM32CubeHAL for seamless firmware portability from the initial STM32F4 prototype.
-* Hardware-Driven Power Gating: Candles are hardwired and controlled via low-side NPN transistor switches, eliminating wireless reliability issues and fast battery discharge common with infrared (NEC-protocol) remotes.
+* Hardware-Driven Power Gating: Candles are hardwired and controlled via low-side NPN transistor switches, eliminating wireless reliability issues and fast battery discharge.
 * Scalable Output: The custom PCB features parallel sockets for each channel, supporting up to 6 candles in total (powered by a dedicated stable 5V PSU).
+
+---
 
 ### PCB Design & Assembly
 
-*Реальная собранная плата:*
-![Custom PCB Assembly](1765641905588.jpg)
+*Actual assembled board:*
 
-*Топология / 3D-визуализация в Altium Designer:*
-![Altium Designer PCB Layout](название_файла_альтиум.jpg)
+<p align="center">
+<img width="700" alt="Custom PCB Assembly" src="https://github.com/user-attachments/assets/01685a47-a24d-4346-bc09-be3c934216d1" />
+<p/>
+<br>
 
-* Secure Enclosure: Features a custom-designed sheet metal chassis with an integrated metallic safe deposit box and physical lock. The terminal utilizes a multi-rail power system to supply the necessary 12V for the bill acceptor and a separate regulated rail for the logic control board.
+*Topology / 3D visualization in Altium Designer:*
+
+<p align="center">
+<img width="676" height="587" alt="Altium Designer PCB Layout" src="https://github.com/user-attachments/assets/0cce69d2-4297-416d-bb8b-b30cf65bd2b3" />
+<p/>
+<br>
 
 ### Enclosure Design & System Sub-Assembly
 
-*3D-модель корпуса в SolidWorks:*
-![SolidWorks Enclosure Design](название_файла_солид.jpg)
+*3D model of the Enclosure in SolidWorks:*
 
-*Внутренний монтаж системы и блоки питания:*
-![System Sub-Assembly and Power Management](20251219_131434.jpg)
+<p align="center">
+<img width="500" alt="SolidWorks Enclosure Design" src="https://github.com/user-attachments/assets/492dd77d-6035-42bb-98ec-0d6a66c9562a" />
+<p/>
+<br>
+
+*System Sub-Assembly and Power Management:*
+
+<p align="center">
+<img width="700" alt="System Sub-Assembly and Power Management" src="https://github.com/user-attachments/assets/1c91ec19-5291-4f30-92f5-a9aed5f13c7b" />
+<p/>
+<br>
 
 ---
 
