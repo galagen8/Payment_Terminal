@@ -1,4 +1,4 @@
-# Banknote-Operated Donation Terminal
+# Payment Donation Terminal
 
 A hardware and software solution designed as an automated donation terminal for a church. The system accepts cash (banknotes) and triggers electrical decorative candles to light up for a specific duration based on the donation amount.
 
