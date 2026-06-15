@@ -86,4 +86,4 @@ The lighting sequence dynamically scales with the donation amount, managed by a 
 
 * /Firmware — STM32CubeIDE project and source code (HAL-based).
 * /Altium — Schematic and PCB layout files (manufactured via JLCPCB, hand-assembled).
-* /SolidWorks — 3D models and manufacturing drawings for the sheet metal enclosure and safe box.
+* /SolidWorks — 3D models and manufacturing drawings for the HLP enclosure.
