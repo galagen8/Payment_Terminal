@@ -57,7 +57,7 @@ This repository contains the complete design files, including MCU firmware, PCB 
 <p/>
 <br>
 
-*System Sub-Assembly and Power Management:*
+*System Sub-Assembly and Power Distribution:*
 
 <p align="center">
 <img width="700" alt="System Sub-Assembly and Power Management" src="https://github.com/user-attachments/assets/1c91ec19-5291-4f30-92f5-a9aed5f13c7b" />
